@@ -30,9 +30,24 @@
 
 
 <script>
+    const chessboard = document.getElementById('board');
+    
+    for (let row = 0; row < 8; row++) {
+      for (let col = 0; col < 8; col++) {
+        const square =  chessboard.createElement('div');
+        square.classList.add('square');
 
-
-</script>
+        if ((row + col) % 2 === 0) {
+          square.classList.add('white');
+        } else {
+          square.classList.add('black');
+        }
+        
+        
+        chessboard.appendChild(square);
+      }
+    }
+  </script>
 </body>
 
 
